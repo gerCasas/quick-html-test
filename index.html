@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Proyecto Primitivas Gráficas</title>
+    <meta charset="utf-8"/>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Allerta" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css"/>
+  </head>
+
+  <body>
+    <header id="header" class="header contenedor">
+
+      <nav class="menu">
+        <ul>
+          <li>
+            <a href="about.html" class="about-style">About</a>
+          </li>
+        </ul>
+      </nav>
+
+    </header>
+
+    <section id="portada" class="portada"><!-- portada -->
+      <div class="contenedor">
+        <h1 class="titulo">Proyecto Primitivas Gráficas</h1><!-- titulo -->
+      </div>
+    </section>
+
+    <section id="cont" class=" contenedor">
+
+      <article class="content">
+        <div class="contenedor-principal">
+
+          <canvas id="myCanvas"  class="canvas-style">
+          Your browser does not support the HTML5 canvas tag.</canvas>
+
+          <script>
+            var c = document.getElementById("myCanvas");
+            var ctx = c.getContext("2d");
+            ctx.beginPath();
+            ctx.arc(95,50,40,0,2*Math.PI);
+            ctx.stroke();
+          </script>
+
+        </div>
+
+        <div class="contenedor-estilo">
+
+          <h3 class="estilo-titulo-estilo">Estilo</h3>
+
+          <div class="contenedor-color">
+              <h4>Color:</h4><input type="color" id="myColor">
+          </div>
+
+          <div class="contenedor-rango">
+            <h4 class="estilo-titulo-grueso">Grueso:</h4>
+            <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+          </div>
+        </div>
+
+        <div class="contenedor-graficas">
+          <h3>Algoritmo</h3>
+          <input type="radio" id="ec-rec" checked name="ecuacion" value="ec-rec">
+          <label >Ecuación rec.</label>
+
+          <input type="radio" id="dda" name="ecuacion" value="dda">
+          <label >DDA</label>
+
+            <input type="radio" id="bresenham" name="ecuacion" value="bresenham">
+            <label >Bresenham</label>
+
+            <input type="radio" id="bres-entero" name="ecuacion" value="bres-entero">
+            <label >Bres enteros</label>
+        </div>
+
+        <div class="contenedor-botones">
+          <h4 class="estilo-titulo-grueso">Opciones:</h4>
+          <button type="button" onclick="alert('Hello world!')">Circulo</button>
+          <button type="button" onclick="alert('Hello world!')">Circulo Bres</button>
+          <button type="button" onclick="alert('Hello world!')">Borrar</button>
+          <form action="about.html">
+            <input type="submit" value="About" />
+          </form>
+        </div>
+
+      </article>
+    </section>
+
+    <footer class="footer">
+      <div class="contenedor_fotter">
+      </div>
+    </footer>
+
+  </body>
+</html>
