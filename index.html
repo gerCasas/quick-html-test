@@ -8,6 +8,9 @@
   </head>
 
   <body>
+
+    <script src="circulos.js"></script>
+    <script src="lineas.js"></script>
     <header id="header" class="header contenedor">
 
       <nav class="menu">
@@ -37,9 +40,6 @@
           <script>
             var c = document.getElementById("myCanvas");
             var ctx = c.getContext("2d");
-            ctx.beginPath();
-            ctx.arc(95,50,40,0,2*Math.PI);
-            ctx.stroke();
           </script>
 
         </div>
@@ -75,9 +75,9 @@
 
         <div class="contenedor-botones">
           <h4 class="estilo-titulo-grueso">Opciones:</h4>
-          <button type="button" onclick="alert('Hello world!')">Circulo</button>
-          <button type="button" onclick="alert('Hello world!')">Circulo Bres</button>
-          <button type="button" onclick="alert('Hello world!')">Borrar</button>
+          <button type="button" onclick="generarLinea()">Circulo</button>
+          <button type="button" onclick="circuloBres()">Circulo Bres</button>
+          <button type="button" onclick="borrarTodo()">Borrar</button>
           <form action="about.html">
             <input type="submit" value="About" />
           </form>
